@@ -1,48 +1,112 @@
-* {
-    box-sizing: border-box;
-  }
-  .video-background {
-    background: #000;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -99;
-  }
-  .video-foreground,
-  .video-background iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+ 
+@font-face {
+  font-family: 'neuton' ;
+  src: url('Neuton/Neuton-Regular.ttf');
+}
+@font-face {
+  font-family: 'neuton' ;
+  src: url('Neuton/Neuton-ExtraBold.ttf');
+  font-weight: bolder;
+}
+
+*{    
+box-sizing: border-box;
   }
   
-  @media (min-aspect-ratio: 16/9) {
-    .video-foreground {
-      height: 300%;
-      top: -100%;
-    }
+body {
+  background-color: black;
+  margin: 0;
+}
+ 
+#gallery {
+  background-color: white;
+  color: black;
+}
+
+  header {
+   background-color: aquamarine;
+   padding: 25px;
+ }
+
+ main,
+ footer {
+  color: white;
+  margin: 30px;
+ }
+ 
+ #gallery main,
+ #gallery footer {
+   color: black;
+ }
+ 
+ nav {
+  list-style-type: none;
+}
+
+nav li {
+  padding-top: 5px;
+  padding-bottom: 5px;
   }
-  @media (max-aspect-ratio: 16/9) {
-    .video-foreground {
-      width: 300%;
-      left: -100%;
-    }
+
+nav li a {
+color: red;
+}
+
+h1{
+  font-family: 'neuton';
+  font-weight: bolder;
+  font-size: 3em;
+}
+footer a {
+  color: red;
+}  
+
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground {
+    height: 300%;
+    top: -100%;
   }
-  @media all and (max-width: 600px) {
-    .vid-info {
-      width: 50%;
-      padding: 0.5rem;
-    }
-    .vid-info h1 {
-      margin-bottom: 0.2rem;
-    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground {
+    width: 300%;
+    left: -100%;
   }
-  @media all and (max-width: 500px) {
-    .vid-info .acronym {
-      display: none;
-    }
+}
+
+@media all and (max-width: 600px) {
+  .vid-info {
+    width: 50%;
+    padding: 0.5rem;
   }
+  
+  .vid-info h1 {
+    margin-bottom: 0.2rem;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .vid-info .acronym {
+    display: none;
+  }
+}
