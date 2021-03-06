@@ -1,4 +1,4 @@
- 
+
 @font-face {
   font-family: 'neuton' ;
   src: url('Neuton/Neuton-Regular.ttf');
@@ -8,7 +8,9 @@
   src: url('Neuton/Neuton-ExtraBold.ttf');
   font-weight: bolder;
 }
-
+html{
+  position: absolute; left: 0; right: 0;
+}
 *{    
 box-sizing: border-box;
   }
@@ -24,8 +26,13 @@ body {
 }
 
   header {
-   background-color: aquamarine;
-   padding: 25px;
+   background-color: hotpink;
+    padding: 20px;
+ }
+
+ .mythoughts {
+  background: hotpink; 
+  padding: 5px
  }
 
  main,
@@ -38,7 +45,14 @@ body {
  #gallery footer {
    color: black;
  }
- 
+ .images{
+  white-space: nowrap;
+ }
+
+.images img {
+  margin: 15px;
+}
+
  nav {
   list-style-type: none;
 }
@@ -57,6 +71,7 @@ h1{
   font-weight: bolder;
   font-size: 3em;
 }
+
 footer a {
   color: red;
 }  
